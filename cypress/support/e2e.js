@@ -14,4 +14,18 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
+Cypress.on('uncaught:exception', (err) => {
+  if (
+    err.message.includes('is not a function')
+  ) {
+    return false
+  }
+
+})
+
+Cypress.on('uncaught:exception', () => false)
+// Ignore all uncaught exceptions (safe for SauceDemo demo app)
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false
+})

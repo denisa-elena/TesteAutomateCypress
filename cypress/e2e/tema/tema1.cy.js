@@ -11,7 +11,7 @@ describe('tema1', () => {
 
     it('Correct login', () => {
         //open URL
-        cy.visit('https://www.saucedemo.com/');
+        cy.visit('https://www.saucedemo.com/');cd C:\TestareCypress
         //login and assertion
         cy.get('#user-name').type('error_user');
         cy.get('#password').type('secret_sauce');
