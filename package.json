@@ -16,14 +16,13 @@
     "test:ui": "cypress run --spec \"cypress/e2e/tests/ui/**/*.cy.js\"",
     "test:api": "cypress run --spec \"cypress/e2e/tests/api/**/*.cy.js\"",
 
-    "test:all": "cypress run"
+    "test:all": "cypress run",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx cypress run"
   },
 
   "scriptsPip": {
-    "cypress:open": "cypress open",
 
-    "test:ui": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx cypress run"
 
   }
 }
