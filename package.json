@@ -1,5 +1,31 @@
 {
   "dependencies": {
+    "@faker-js/faker": "^10.3.0",
     "cypress": "^15.8.2"
+  },
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "cypress-real-events": "^1.15.0",
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^3.0.5"
+  },
+
+    "scripts": {
+    "cypress:open": "cypress open",
+
+    "test:ui": "cypress run --spec \"cypress/e2e/tests/ui/**/*.cy.js\"",
+    "test:api": "cypress run --spec \"cypress/e2e/tests/api/**/*.cy.js\"",
+
+    "test:all": "cypress run"
+  },
+
+  "scriptsPip": {
+    "cypress:open": "cypress open",
+
+    "test:ui": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx cypress run"
+
   }
 }
+
+
