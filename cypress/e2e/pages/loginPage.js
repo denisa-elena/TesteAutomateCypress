@@ -9,14 +9,14 @@ elements = {
     
 }
 //creeam o metoda login ce poate fi apelata de fiecare data cand avem nevoie de logare
-login(){
-    cy.visit('https://www.saucedemo.com/');
-    //din aceasta clasa this vom luam elementeles user, pass la caer vom face type cu credentialele
-    this.elements.username().type('error_user');
-    this.elements.password().type('secret_sauce');
-    this.elements.loginButton().click();
-    //this.elements.url().should('include', 'inventory.html');
-}
+// login(){
+//     cy.visit('https://www.saucedemo.com/');
+//     //din aceasta clasa this vom luam elementeles user, pass la caer vom face type cu credentialele
+//     this.elements.username().type('error_user');
+//     this.elements.password().type('secret_sauce');
+//     this.elements.loginButton().click();
+//     //this.elements.url().should('include', 'inventory.html');
+// }
 
 failedLogin() {
     cy.visit('https://www.saucedemo.com/');

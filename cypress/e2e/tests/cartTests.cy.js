@@ -9,7 +9,7 @@ describe('Cart Tests', () => {
     const cartPage = new CartPage();
 
     beforeEach(() => {
-        loginPage.login();
+        cy.login(); 
     });
 
     it('Add product to cart an buy it', () => {

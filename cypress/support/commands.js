@@ -32,3 +32,16 @@ const { expect } = require("chai")
 //     cy.get('#password').type('secret_sauce');
 //     cy.get('#login-button').click();
 // });
+
+Cypress.Commands.add('login', (username = 'standard_user', password = 'secret_sauce') => {
+  cy.session([username, password], () => {
+    cy.visit('https://www.saucedemo.com/');
+    cy.get('[data-test="username"]').type(username);
+    cy.get('[data-test="password"]').type(password);
+    cy.get('[data-test="login-button"]').click();
+    cy.url().should('include', '/inventory.html');
+  },{
+    cacheAcrossSpecs: true // <--- THIS is the secret sauce
+  });
+  cy.visit('https://www.saucedemo.com/inventory.html', { failOnStatusCode: false });
+});
