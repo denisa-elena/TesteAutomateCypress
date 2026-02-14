@@ -6,6 +6,9 @@ on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-24.04
+    
+    env:
+      TERM: xterm
     steps:
       - name: Checkout
         uses: actions/checkout@v4
